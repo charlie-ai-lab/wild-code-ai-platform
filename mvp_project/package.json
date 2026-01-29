@@ -1,0 +1,33 @@
+{
+  "name": "wildai-agent-mvp",
+  "version": "0.1.0",
+  "description": "野码AI Agent协作平台 - 多AI Agent统一协作平台",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"python3 backend/main.py\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && uvicorn main:app --reload"
+  },
+  "dependencies": {
+    "next": "15.5.5",
+    "react": "18.3.1",
+    "typescript": "5.6.5",
+    "tailwindcss": "3.4.15",
+    "fastapi": "0.104.2",
+    "uvicorn": "0.30.6",
+    "sqlalchemy": "2.0.23",
+    "psycopg2-binary": "2.9.9",
+    "redis": "5.0.4",
+    "anthropic": "0.39.0",
+    "openai": "1.51.3",
+    "google-generativeai": "0.8.0",
+    "langchain": "0.3.0",
+    "pydantic-settings": "2.8.0",
+    "pyjwt": "2.8.0",
+    "python-multipart": "0.0.9",
+    "python-dotenv": "1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/wildai-agent-mvp"
+  }
+}
