@@ -5,6 +5,7 @@ FastAPI Main Application
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.agents import router as agents_router
+from api.tasks import router as tasks_router
 
 app = FastAPI(
     title="野码AI Agent Platform",
@@ -23,6 +24,7 @@ app.add_middleware(
 
 # Include routers
 app.include_router(agents_router)
+app.include_router(tasks_router)
 
 
 @app.get("/")
@@ -34,6 +36,7 @@ async def root():
         "docs": "/docs",
         "endpoints": {
             "agents": "/agents",
+            "tasks": "/tasks",
             "health": "/health"
         }
     }
