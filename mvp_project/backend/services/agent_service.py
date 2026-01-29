@@ -3,7 +3,7 @@ Agent Service - Agent业务逻辑
 """
 from typing import List, Optional
 from datetime import datetime
-from models.agent import Agent, AgentRegister, AgentStatus, AgentType, Skill
+from models.agent import Agent, AgentRegister, AgentUpdate, AgentStatus, AgentType, Skill
 
 
 class AgentService:
