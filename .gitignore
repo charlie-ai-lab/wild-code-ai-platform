@@ -62,6 +62,7 @@ yarn-error.log*
 # Memory & Cache
 memory/*.md
 !memory/.gitkeep
+!memory/*-summary.md  # 允许提交项目总结
 *.html
 *.json
 !package.json
