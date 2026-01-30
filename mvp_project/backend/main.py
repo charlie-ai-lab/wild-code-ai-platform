@@ -1,16 +1,17 @@
 """
 FastAPI Main Application
-野码AI Agent协作平台
+野码AI Agent协作平台 + Agent性能基准测试
 """
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.agents import router as agents_router
 from api.tasks import router as tasks_router
+from api.benchmarks import router as benchmarks_router
 
 app = FastAPI(
     title="野码AI Agent Platform",
     version="0.1.0",
-    description="统一的多AI Agent协作平台"
+    description="统一的多AI Agent协作平台 + Agent性能基准测试"
 )
 
 # CORS middleware
@@ -25,18 +26,20 @@ app.add_middleware(
 # Include routers
 app.include_router(agents_router)
 app.include_router(tasks_router)
+app.include_router(benchmarks_router)
 
 
 @app.get("/")
 async def root():
     return {
-        "message": "野码AI Agent Platform API",
+        "message": "野码AI Agent Platform + Agent性能基准测试",
         "version": "0.1.0",
         "status": "developing",
         "docs": "/docs",
         "endpoints": {
             "agents": "/agents",
             "tasks": "/tasks",
+            "benchmarks": "/benchmarks",
             "health": "/health"
         }
     }

@@ -16,6 +16,7 @@
 1. **热点扫描**
    - 检查Hacker News热门
    - 检查GitHub trending
+   - 检查NewsNow实时热点: https://newsnow.busiyi.world/c/realtime
    - 查找新机会/痛点/爽点
    - 如发现高价值机会 → 立即制定MVP计划并汇报
 
